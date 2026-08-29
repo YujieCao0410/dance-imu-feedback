@@ -29,7 +29,7 @@ The Web application:
 - gives direct text feedback;
 - exports teacher and student CSV data.
 
-
+---
 # Repository Structure
 ```
 
@@ -63,7 +63,7 @@ dance-imu-feedback/
             ├── style.css
             └── app.js
 
-
+---
 # Before You Start
 
 Read the hardware documents first:
@@ -253,10 +253,14 @@ hardware/sensor_placement.md
 
 # Step 7. Wear the Sensors
 
+This project uses a single-leg configuration with two wearable sensor nodes.
+
+For the prototype developed in this project, the sensors were worn on the right leg. However, either leg can be used as long as the teacher reference and student test use the same side.
+
 Attach:
 
-- `THIGH-B` to the thigh;
-- `SHANK-B` to the shank.
+- THIGH-B to the thigh;
+- SHANK-B to the shank.
 
 The BNO085 component side should face outward, away from the leg, with the Y-axis pointing upward.
 
@@ -265,6 +269,8 @@ Keep the THIGH and SHANK sensor orientations consistent.
 The nodes must remain firmly fixed during calibration and movement.
 
 Do not reposition the sensors after calibration.
+
+For future bilateral implementation, two sensor nodes can be used on each leg, for a total of four wearable sensor nodes.
 
 ---
 
