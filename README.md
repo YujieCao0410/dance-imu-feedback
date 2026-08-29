@@ -375,14 +375,14 @@ Prototype tolerances:
 At the detected lowest point, the Web application gives direct correction feedback.
 
 Examples include:
-```
-Bend more
-Bend less
-Move your knee in
-Move your knee out
-Rotate your lower leg in
-Rotate your lower leg out
-```
+
+Bend more；
+Bend less；
+Move your knee in；
+Move your knee out；
+Rotate your lower leg in；
+Rotate your lower leg out；
+
 
 Use the feedback to adjust the next repetition.
 
