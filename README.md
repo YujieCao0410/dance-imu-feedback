@@ -29,7 +29,7 @@ The Web application:
 - gives direct text feedback;
 - exports teacher and student CSV data.
 
----
+'''
 
 # Repository Structure
 
@@ -63,7 +63,7 @@ dance-imu-feedback/
             ├── style.css
             └── app.js
 
----
+'''
 
 # Before You Start
 
