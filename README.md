@@ -86,7 +86,7 @@ Read the hardware documents first:
    - wearable assembly;
    - 2-second calibration requirements.
 
-```
+
 
 # Required Software
 
