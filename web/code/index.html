@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dance Foundation Training</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="app-header">
+    <div>
+      <h1>Dance Foundation Training</h1>
+      <p>IMU-based feedback system for learning street dance basics</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="home-page" class="page active">
+      <h2>Choose a Foundation</h2>
+      <p class="page-description">
+        Select a basic movement to learn with real-time IMU feedback.
+      </p>
+
+      <div class="foundation-grid">
+        <button class="foundation-card active-card" onclick="showBouncePage()">
+          <h3>Bounce</h3>
+          <p>Learn body lowering, knee control, and basic bounce movement.</p>
+          <span>Open</span>
+        </button>
+
+        <button class="foundation-card disabled-card" disabled>
+          <h3>Rock</h3>
+          <p>Coming soon</p>
+          <span>Locked</span>
+        </button>
+
+        <button class="foundation-card disabled-card" disabled>
+          <h3>Running Man</h3>
+          <p>Coming soon</p>
+          <span>Locked</span>
+        </button>
+
+        <button class="foundation-card disabled-card" disabled>
+          <h3>Body Wave</h3>
+          <p>Coming soon</p>
+          <span>Locked</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="bounce-page" class="page">
+      <button class="back-button" onclick="showHomePage()">← Back to Foundations</button>
+
+      <h2>Bounce Training</h2>
+      <p class="page-description">
+        Bounce contains two parts: up and down. Choose one section to practice.
+      </p>
+
+      <div class="foundation-grid">
+        <button class="foundation-card active-card" onclick="showBounceDownPage()">
+          <h3>Bounce Down</h3>
+          <p>Focus on the down position: knee bending, body lowering, and knee stability.</p>
+          <span>Start</span>
+        </button>
+
+        <button class="foundation-card disabled-card" disabled>
+          <h3>Bounce Up</h3>
+          <p>Coming soon</p>
+          <span>Locked</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="bounce-down-page" class="page">
+      <button class="back-button" onclick="showBouncePage()">← Back to Bounce</button>
+
+      <section class="intro-panel">
+        <h2>Bounce Down</h2>
+        <p>
+          Bounce contains two parts: up and down. This module focuses on the down position.
+          Learn how to stand, bend, and control the movement safely before starting the exercise.
+        </p>
+      </section>
+
+      <section class="reference-panel">
+        <h3>Reference Motion</h3>
+
+        <div class="video-demo-grid">
+          <div class="video-card">
+            <h4>Front View</h4>
+            <video
+              src="real-dancer-front.mov"
+              autoplay
+              muted
+              loop
+              playsinline
+              controls
+            ></video>
+            <p>Use this view to check knee direction and side-to-side stability.</p>
+          </div>
+
+          <div class="video-card">
+            <h4>Side View</h4>
+            <video
+              src="real-dancer-side.mov"
+              autoplay
+              muted
+              loop
+              playsinline
+              controls
+            ></video>
+            <p>Use this view to check knee bending and body lowering.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="instruction-panel">
+        <h3>How to Do It</h3>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <span class="step-number">1</span>
+            <h4>Stand tall</h4>
+            <p>
+              Stand with your feet about shoulder-width apart. Keep your arms relaxed by your sides.
+              Keep your knees soft, not locked.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-number">2</span>
+            <h4>Set your knee direction</h4>
+            <p>
+              Let your toes point forward or slightly outward in a natural position.
+              Keep your knees facing the same direction as your toes.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-number">3</span>
+            <h4>Bend into the down position</h4>
+            <p>
+              Bend your knees and lower your body with control. Keep your upper body stable
+              and avoid letting your knees collapse inward.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-number">4</span>
+            <h4>Hold the down position</h4>
+            <p>
+              Stay in the down position briefly and keep the movement controlled.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-number">5</span>
+            <h4>Return with control</h4>
+            <p>
+              Rise back up smoothly. Do not snap or push up suddenly.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="safety-panel">
+        <h3>Safety Notes</h3>
+        <ul>
+          <li>Keep your knees soft, not locked.</li>
+          <li>Keep your knees facing the same direction as your toes.</li>
+          <li>Avoid letting your knees collapse inward.</li>
+          <li>Move down and up with control.</li>
+          <li>Use a comfortable range of motion.</li>
+          <li>Do not force a deep bend.</li>
+          <li>Stop if you feel pain.</li>
+        </ul>
+      </section>
+
+      <section class="sensor-panel">
+        <h3>Connect Sensors</h3>
+        <p class="panel-description">
+          Connect the thigh and shank IMUs before recording teacher data or starting the student exercise.
+        </p>
+
+        <div class="button-row">
+          <button id="connect-thigh-button">Connect THIGH-B</button>
+          <button id="connect-shank-button">Connect SHANK-B</button>
+        </div>
+
+        <div class="sensor-grid">
+          <div class="sensor-card">
+            <h4>THIGH-B</h4>
+            <p id="thigh-status" class="sensor-status">Not connected</p>
+            <pre id="thigh-data">No data</pre>
+          </div>
+
+          <div class="sensor-card">
+            <h4>SHANK-B</h4>
+            <p id="shank-status" class="sensor-status">Not connected</p>
+            <pre id="shank-data">No data</pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="teacher-recording-panel">
+        <h3>Teacher Data Recording</h3>
+        <p class="panel-description">
+          Use this section to record and export teacher IMU data. The embedded teacher reference is used for student movement comparison and feedback.
+        </p>
+
+        <div class="button-row recording-controls">
+          <button id="start-recording-button">Start Teacher Recording</button>
+          <button id="stop-recording-button" disabled>Stop Recording</button>
+          <button id="download-csv-button" disabled>Download Teacher CSV</button>
+        </div>
+
+        <p id="recording-status" class="recording-status">Teacher recording not started.</p>
+      </section>
+
+      <section class="student-exercise-panel">
+        <h3>Student Exercise</h3>
+        <p class="panel-description">
+          Press Start Exercise, stand straight for 2 seconds for calibration, then perform 3 rounds of 3 bounce repetitions.
+          Knee angles are checked at the lowest point of each bounce, while the full exercise is used for the final movement summary. Student IMU data can also be downloaded after the exercise for evaluation.
+        </p>
+
+        <div class="knee-angle-guide">
+          <div class="knee-angle-card">
+            <img src="flexion.png" alt="Flexion and extension knee movement" />
+            <p class="knee-angle-feedback">
+              Flexion → Bend more.<br />
+              Extension → Bend less.
+            </p>
+          </div>
+
+          <div class="knee-angle-card">
+            <img src="abduction.png" alt="Abduction and adduction knee movement" />
+            <p class="knee-angle-feedback">
+              Abduction → Move your knee out.<br />
+              Adduction → Move your knee in.
+            </p>
+          </div>
+
+          <div class="knee-angle-card">
+            <img src="internal rotation.png" alt="Internal and external rotation knee movement" />
+            <p class="knee-angle-feedback">
+              Internal rotation → Rotate your lower leg in.<br />
+              External rotation → Rotate your lower leg out.
+            </p>
+          </div>
+        </div>
+
+        <div class="button-row exercise-controls">
+          <button id="start-exercise-button">Start Exercise</button>
+          <button id="stop-exercise-button" disabled>Stop Exercise</button>
+          <button id="download-student-csv-button" disabled>Download Student CSV</button>
+        </div>
+
+        <p id="exercise-status" class="exercise-status">Ready to start.</p>
+
+        <div class="exercise-feedback-grid">
+          <div class="exercise-round-card">
+            <span>Round</span>
+            <strong id="exercise-round">0 / 3</strong>
+          </div>
+
+          <div class="exercise-command-card">
+            <span>What to do</span>
+            <strong id="exercise-action-command">STAND READY</strong>
+          </div>
+
+          <div class="exercise-command-card correction-card">
+            <span id="exercise-feedback-title">Movement feedback</span>
+
+            <div class="angle-feedback-list">
+              <div id="exercise-flexion-feedback" class="angle-feedback-item" hidden></div>
+              <div id="exercise-aa-feedback" class="angle-feedback-item" hidden></div>
+              <div id="exercise-ie-feedback" class="angle-feedback-item" hidden></div>
+            </div>
+
+            <strong id="exercise-correction-command">Start the exercise to receive movement feedback.</strong>
+          </div>
+        </div>
+
+        <p id="exercise-summary" class="exercise-summary"></p>
+      </section>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
