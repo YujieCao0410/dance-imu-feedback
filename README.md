@@ -63,7 +63,6 @@ dance-imu-feedback/
             ├── style.css
             └── app.js
 
-'''
 
 # Before You Start
 
