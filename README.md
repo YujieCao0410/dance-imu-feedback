@@ -63,6 +63,8 @@ dance-imu-feedback/
             ├── style.css
             └── app.js
 
+```
+
 # Before You Start
 
 Read the hardware documents first:
@@ -380,6 +382,7 @@ Move your knee in
 Move your knee out
 Rotate your lower leg in
 Rotate your lower leg out
+```
 
 Use the feedback to adjust the next repetition.
 
