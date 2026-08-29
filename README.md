@@ -29,9 +29,9 @@ The Web application:
 - gives direct text feedback;
 - exports teacher and student CSV data.
 
-'''
 
 # Repository Structure
+```
 
 dance-imu-feedback/
 │
@@ -86,7 +86,7 @@ Read the hardware documents first:
    - wearable assembly;
    - 2-second calibration requirements.
 
----
+```
 
 # Required Software
 
