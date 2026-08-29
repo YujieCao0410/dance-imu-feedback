@@ -513,6 +513,6 @@ View final summary
 Export CSV data
 
 ## Demonstration Video
-
+```
 A demonstration of the complete wearable dance training system, including BLE sensor connection, teacher reference recording, student exercise, real-time knee-angle feedback, and exercise summary, is available here:
 [Watch the demonstration video on YouTube](https://youtu.be/7lpJY023DZI)
