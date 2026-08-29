@@ -373,7 +373,7 @@ Prototype tolerances:
 At the detected lowest point, the Web application gives direct correction feedback.
 
 Examples include:
-
+```
 Bend more
 Bend less
 Move your knee in
