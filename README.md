@@ -475,7 +475,7 @@ https://learn.adafruit.com/adafruit-9-dof-orientation-imu-fusion-breakout-bno085
 The official guide includes the BNO085 I2C wiring diagram and pin descriptions.
 
 ---
-
+```
 # Final System Flow
 
 Solder pin headers
