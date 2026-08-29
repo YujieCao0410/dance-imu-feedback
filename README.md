@@ -133,6 +133,8 @@ Use USB power first during firmware upload and testing.
 
 After the electronics are confirmed to work, use the 3.7 V 500 mAh LiPo battery for the final wearable setup.
 
+Note: It is recommended to clearly label the two sensor nodes so they can be easily identified during setup. For example, in this project, a sticker was placed on the THIGH node to distinguish it from the SHANK node.
+
 ---
 
 # Step 2. Test Basic Bluetooth Advertising
@@ -224,12 +226,6 @@ Confirm that:
 - quaternion data is received while connected;
 - both devices can reconnect after reset.
 
-Note:
-
-BLE notifications may split one quaternion message into several fragments.
-
-The Web application therefore buffers incoming text and only parses data after a complete newline-delimited message has been reconstructed.
-
 ---
 
 # Step 6. Assemble the Wearable Mounting
@@ -309,11 +305,8 @@ Then:
 2. Select `SHANK-B`.
 3. Confirm that SHANK quaternion values appear.
 
-Both sensor panels should update continuously.
-
-The nRF52840 does not choose a laptop by itself.
-
-The browser scans for nearby BLE peripherals, the user selects the correct device, and data is transmitted through the BLE connection established by the browser.
+Note:
+If one or both sensors can connect to the web application but no data is displayed, press the reset button on the affected sensor node.
 
 ---
 
